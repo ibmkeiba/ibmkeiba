@@ -8,7 +8,10 @@
 * index (https://ibmkeiba.github.io/theme/)
 
 ### Local: MAMP
-* example(http://localhost/keiba/GitHub/ibmkeiba/example/)
+* example index (http://localhost/keiba/GitHub/ibmkeiba/example/)
+* example original (http://localhost/keiba/GitHub/ibmkeiba/example/original.html)
+* example combine (http://localhost/keiba/GitHub/ibmkeiba/example/combine.html)
+combine.html
 
 ### Plugin Link
 * Bootstrap5 (https://getbootstrap.jp/)
@@ -20,6 +23,13 @@
 ### CDN from GitHub
 * jsdeliver (https://www.jsdelivr.com/github)
 
+|  Type  |  Name  |  URL  |
+| ---- | ---- | ---- |
+|  CSS  |  fontawesome.min.css  |  https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/style/css/fontawesome.min.css  |
+|  CSS  |  templatemo-style.css  |  https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/style/css/templatemo-style.css  |
+|  JS  |  Chart.min.js  |  https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/style/js/Chart.min.js  |
+|  JS  |  moment.min.js  |  https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/style/js/moment.min.js  |
+|  JS  |  tooplate-scripts.js  |  https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/style/js/tooplate-scripts.js  |
 
 
 ## ibmkeiba ファイル構成
@@ -30,10 +40,13 @@ root/
 ├── dbinfo.php
 ├── style/
 │   ├── css/
+│   │   ├── bootstrap.min.css
 │   │   ├── fontawesome.min.css
 │   │   └── templatemo-style.css
 │   └── js/
 │       ├── Chart.min.js
+│       ├── bootstrap.min.js
+│       ├── jquery-3.3.1.min.js
 │       ├── moment.min.js
 │       └── tooplate-scripts.js
 ├── example/
