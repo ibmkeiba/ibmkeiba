@@ -1,54 +1,90 @@
-## Link集
+## Web Site
 
 ### AWS: ai-keiba-newhier
 * root (https://ai-keiba-newhier.link/)
 * example (https://ai-keiba-newhier.link/example)
 
-### GitHub: theme demo
-https://ibmkeiba.github.io/theme/
+### GitHub: theme original
+* index (https://ibmkeiba.github.io/theme/)
 
 ### Local: MAMP
 * example(http://localhost/keiba/GitHub/ibmkeiba/example/)
 
+### Plugin Link
+* Bootstrap5 (https://getbootstrap.jp/)
+* Bootstrap4 (https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+* FullCalendar (https://fullcalendar.io/)
+* Product Admin Template (https://templatemo.com/tm-524-product-admin)
+
+
+### CDN from GitHub
+* jsdeliver (https://www.jsdelivr.com/github)
+
+
+
 ## ibmkeiba ファイル構成
 
 <pre>
-root
+root/
 ├── README.md
 ├── dbinfo.php
-├── style
-│   ├── css
+├── style/
+│   ├── css/
 │   │   ├── fontawesome.min.css
 │   │   └── templatemo-style.css
-│   └── js
+│   └── js/
 │       ├── Chart.min.js
 │       ├── moment.min.js
 │       └── tooplate-scripts.js
-├── example
+├── example/
 │   ├── index.html
 │   ├── original.html
 │   ├── empty.html
 │   ├── combine.html
-│   ├── data
+│   ├── data/
 │   │   ├── index.html
-│   │   ├── calendar
+│   │   ├── calendar/
 │   │   │   └── index.html
-│   │   ├── date
-│   │   ├── race
-│   │   ├── card
-│   │   └── recommend
-│   └── contents
-│       ├── calendar
+│   │   ├── date/
+│   │   ├── race/
+│   │   ├── card/
+│   │   └── recommend/
+│   └── contents/
+│       ├── calendar/
 │       │   ├── index.html
 │       │   └── parts
 │       │       └── dev1.html
-│       ├── date
-│       ├── race
-│       ├── card
-│       └── recommend
-├── main
-└── memo
+│       ├── date/
+│       ├── race/
+│       ├── card/
+│       └── recommend/
+├── main/
+└── memo/
+</pre>
 
+
+## Apache Server 実際の配置
+
+<pre>
+var/
+└── www/
+    ├── .dbinfo.php
+    ├── .venv
+    └── html/
+        ├── index.html
+        ├── data
+        │   └── index.html
+        └── contents
+            ├── calendar/
+            │   └── parts.html
+            ├── date/
+            │   └── parts.html
+            ├── race/
+            │   └── parts.html
+            ├── card/
+            │   └── parts.html
+            └── recommend/
+                └── parts.html
 </pre>
 
 <!--
