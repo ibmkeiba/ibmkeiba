@@ -1,11 +1,44 @@
 ## ファイル構成
 
-+ /pages
-    + /posts
-        + .check-list.md
-        + .directory-list.md
-+ /css
-    + .main.css
+<pre>
+root
+├── README.md
+├── dbinfo.php
+├── style
+│   ├── css
+│   │   ├── fontawesome.min.css
+│   │   └── templatemo-style.css
+│   └── js
+│       ├── Chart.min.js
+│       ├── moment.min.js
+│       └── tooplate-scripts.js
+├── example
+│   ├── index.html
+│   ├── data
+│   │   ├── index.html
+│   │   ├── calendar
+│   │   │   └── index.html
+│   │   ├── date
+│   │   ├── race
+│   │   ├── card
+│   │   └── recommend
+│   └── contents
+│       ├── calendar
+│       │   ├── index.html
+│       │   └── parts
+│       │       └── dev1.html
+│       ├── date
+│       ├── race
+│       ├── card
+│       └── recommend
+├── index.html
+├── original.html
+├── empty.html
+├── combine.html
+└── memo
+
+</pre>
+
 <!--
 **ibmkeiba/ibmkeiba** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
