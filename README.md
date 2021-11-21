@@ -32,7 +32,10 @@ combine.html
 |  JS  |  tooplate-scripts.js  |  https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/style/js/tooplate-scripts.js  |
 
 
+### CDN from Official
+
 * jsdeliver (https://www.jsdelivr.com/)
+* Bootstrap v4.5 (https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
 |  Type  |  Name  |  CODE  |
 | ---- | ---- | ---- |
