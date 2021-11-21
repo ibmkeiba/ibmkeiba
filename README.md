@@ -1,4 +1,16 @@
-## ファイル構成
+## Link集
+
+### AWS: ai-keiba-newhier
+* root (https://ai-keiba-newhier.link/)
+* example (https://ai-keiba-newhier.link/example)
+
+### GitHub: theme demo
+https://ibmkeiba.github.io/theme/
+
+### Local: MAMP
+* example(http://localhost/keiba/GitHub/ibmkeiba/example/)
+
+## ibmkeiba ファイル構成
 
 <pre>
 root
@@ -14,6 +26,9 @@ root
 │       └── tooplate-scripts.js
 ├── example
 │   ├── index.html
+│   ├── original.html
+│   ├── empty.html
+│   ├── combine.html
 │   ├── data
 │   │   ├── index.html
 │   │   ├── calendar
@@ -31,10 +46,7 @@ root
 │       ├── race
 │       ├── card
 │       └── recommend
-├── index.html
-├── original.html
-├── empty.html
-├── combine.html
+├── main
 └── memo
 
 </pre>
