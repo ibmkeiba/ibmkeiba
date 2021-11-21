@@ -1,5 +1,11 @@
-### Hi there 👋
+## ファイル構成
 
++ /pages
+    + /posts
+        + .check-list.md
+        + .directory-list.md
++ /css
+    + .main.css
 <!--
 **ibmkeiba/ibmkeiba** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
