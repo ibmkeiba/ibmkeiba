@@ -18,6 +18,9 @@ combine.html
 * Bootstrap4 (https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 * FullCalendar (https://fullcalendar.io/)
 * Product Admin Template (https://templatemo.com/tm-524-product-admin)
+* Font Awesome (https://fontawesome.com)
+* Chart.js (https://www.chartjs.org/)
+
 
 
 ### CDN from GitHub
@@ -50,7 +53,7 @@ combine.html
 root/
 ├── README.md
 ├── dbinfo.php
-├── style/
+├── styles/
 │   ├── css/
 │   │   ├── bootstrap.min.css
 │   │   ├── fontawesome.min.css

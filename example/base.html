@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
+<!-- Header -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Product Admin - Dashboard HTML Template</title>
+    <title>AIしか勝たん</title>
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
     <!-- https://fonts.google.com/specimen/Roboto -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/style/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/styles/css/all.min.css">
     <!-- https://fontawesome.com/ -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <!-- https://getbootstrap.com/ -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/style/css/templatemo-style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/styles/css/templatemo-style.css">
+    
     <!--
 	Product Admin CSS Template
 	https://templatemo.com/tm-524-product-admin
@@ -21,10 +24,13 @@
 
 <body id="reportsPage">
     <div class="" id="home">
+
+        <!-- Navigation bar -->
         <nav class="navbar navbar-expand-xl">
             <div class="container h-100">
                 <a class="navbar-brand" href="index.html">
-                    <h1 class="tm-site-title mb-0">Product Admin</h1>
+                    <i class="fas fa-horse-head fa-2x" style="color:orange"></i>
+                    <h1 class="tm-site-title mb-0 ml-3">AIしか勝たん</h1>
                 </a>
                 <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,13 +52,15 @@
                                 aria-haspopup="true" aria-expanded="false">
                                 <i class="far fa-file-alt"></i>
                                 <span>
-                                    Reports <i class="fas fa-angle-down"></i>
+                                    Database <i class="fas fa-angle-down"></i>
                                 </span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Daily Report</a>
-                                <a class="dropdown-item" href="#">Weekly Report</a>
-                                <a class="dropdown-item" href="#">Yearly Report</a>
+                                <a class="dropdown-item" href="#">All</a>
+                                <a class="dropdown-item" href="#">Date</a>
+                                <a class="dropdown-item" href="#">Race Info</a>
+                                <a class="dropdown-item" href="#">Race Card</a>
+                                <a class="dropdown-item" href="#">Update Log</a>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -94,6 +102,8 @@
             </div>
 
         </nav>
+
+        <!-- Main Contents -->
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -102,18 +112,24 @@
             </div>
             <!-- row -->
             <div class="row tm-content-row">
+
+                <!-- Block #1 -->
                 <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-block-col">
                     <div class="tm-bg-primary-dark tm-block">
                         <h2 class="tm-block-title">Latest Hits</h2>
-                        <canvas id="lineChart"></canvas>
+                        <canvas id="lineChart"></canvas>                    
                     </div>
                 </div>
+
+                <!-- Block #2 -->
                 <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-block-col">
                     <div class="tm-bg-primary-dark tm-block">
                         <h2 class="tm-block-title">Performance</h2>
                         <canvas id="barChart"></canvas>
                     </div>
                 </div>
+
+                <!-- Block #3 -->
                 <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-block-col">
                     <div class="tm-bg-primary-dark tm-block tm-block-taller">
                         <h2 class="tm-block-title">Storage Information</h2>
@@ -122,6 +138,8 @@
                         </div>                        
                     </div>
                 </div>
+
+                <!-- Block #4 -->
                 <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-block-col">
                     <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-overflow">
                         <h2 class="tm-block-title">Notification List</h2>
@@ -201,6 +219,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Block #5 -->
                 <div class="col-12 tm-block-col">
                     <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
                         <h2 class="tm-block-title">Orders List</h2>
@@ -355,26 +375,29 @@
                 </div>
             </div>
         </div>
+
+        <!-- Footer -->
         <footer class="tm-footer row tm-mt-small">
             <div class="col-12 font-weight-light">
                 <p class="text-center text-white mb-0 px-4 small">
-                    Copyright &copy; <b>2018</b> All rights reserved. 
+                    Copyright &copy; <b>2021</b> 若手経営タスク 開発チームA. 
                     
-                    Design: <a rel="nofollow noopener" href="https://templatemo.com" class="tm-footer-link">Template Mo</a>
+                    <!-- Design: <a rel="nofollow noopener" href="https://templatemo.com" class="tm-footer-link">Template Mo</a> -->
                 </p>
             </div>
         </footer>
     </div>
 
+    <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <!-- https://jquery.com/download/ -->
-    <script src="https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/style/js/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/styles/js/moment.min.js"></script>
     <!-- https://momentjs.com/ -->
-    <script src="https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/style/js/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/styles/js/Chart.min.js"></script>
     <!-- http://www.chartjs.org/docs/latest/ -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <!-- https://getbootstrap.com/ -->
-    <script src="https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/style/js/tooplate-scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/styles/js/tooplate-scripts.js"></script>
     <script>
         Chart.defaults.global.defaultFontColor = 'white';
         let ctxLine,
