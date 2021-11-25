@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Sample</title>
+</head>
+
+<body>
+    <h1>AJAXの基本 まとめ</h1>
+    <table border="1">
+        <tr>
+            <th>タイトル</td>
+            <th>dataType</th>
+            <th>メインファイル</th>
+            <th>js</th>
+            <th>html/php</th>
+        </tr>
+        <tr>
+            <td>ボタンクリックで外部PHPファイル（中身はHTML）を読み込んで表示</td>
+            <td>html</td>
+            <td><a href="./html-html/index.php">./html-html/index.php</a></td>
+            <td>メインファイル内</td>
+            <td><a href="./html-html/called.php">./html-html/called.php</td>
+        </tr>
+        <tr>
+            <td>ボタンクリックで外部PHPファイル（GET送信）を読み込んで表示</td>
+            <td>html</td>
+            <td><a href="./html-php/index.php">./html-php/index.php</a></td>
+            <td><a href="./html-php/main.js">./html-php/main.js</a></td>
+            <td><a href="./html-php/called.php">./html-php/called.php</td>
+        </tr>
+        <tr>
+            <td>ボタンクリックで外部PHPにGET送信してjsonを返した結果を表示</td>
+            <td>html</td>
+            <td><a href="./json-php/index.php">./jspn-php/index.php</a></td>
+            <td><a href="./json-php/main.js">./json-php/main.js</a></td>
+            <td><a href="./json-php/called.php">./json-php/called.php</td>
+        </tr>
+
+    </table>
+
+<h2>■ 注意事項</h2>
+<div>
+    <ul>
+        <li>自作のjsファイル/プログラムの前にjquery.jsを読み込む必要がある</li>
+    </ul>
+</div>
+
+<h2>■ 参考リンク</h2>
+<div>
+    <ul>
+        <li>【キノコログ】<a href="https://kinocolog.com/jquery_ajax/" target="_blank">jQueryでAjax通信を行う方法【サンプルコードで解説】</a></li>
+        <li>【ウェブカツブログ】<a href="https://webukatu.com/wordpress/blog/8171/" target="_blank">jQueryでphpからデータを取得する方法を解説</a></li>
+        <li>【Tech Academy】<a href="https://techacademy.jp/magazine/37062" target="_blank">jQueryのAjaxでPOST送信してPHPで受け取る方法【初心者向け】現役エンジニアが解説</a></li>
+        <li>【ウェブカツブログ】<a href="https://kinocolog.com/jquery_ajax/" target="_blank">jQueryでAjax通信を行う方法【サンプルコードで解説】</a></li>
+        <li>【コピペで使える】<a href="https://javascript.programmer-reference.com/jquery-each-class/" target="_blank">[jQuery] 指定したclassの全要素を取得してループ処理をする</a></li>
+    </ul>
+</div>
+
+</body>
+
+</html>

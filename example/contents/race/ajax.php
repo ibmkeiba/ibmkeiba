@@ -3,7 +3,18 @@
 ?>
 <?php $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC); ?>
 
-<?php $ymd = 20211002 ?>
+<!-- GET送信の値を格納 -->
+<?php
+if ( isset($_GET['ymd']) ){
+    $ymd = $_GET['ymd'];
+    echo "ymd= $ymd がGET送信されました";
+}
+else{
+    $ymd = 20211002;
+    echo "ymdがGET送信されていません";
+}
+?>
+
 <?php $date = $pdo->query("select date from info WHERE ymd = $ymd GROUP BY date")->fetchColumn() ?>
 
 <!-- menu(開催状況) 毎の表示変更 -->
@@ -46,7 +57,7 @@ function menujudge($menu)
                         <td class="text-center">
                             <?php list($status, $menudisp) =  menujudge($row['menu']) ?>
                             <div class="tm-status-circle <?php echo $status ?>">
-                            </div><b><?php echo $menudisp ?></b>
+                            </div><?php echo $menudisp ?>
                         </td>
                         <?php foreach (array_slice($row, 1) as $col) : ?>
                             <td class="text-center"><b><?php echo $col ?></b></td>
