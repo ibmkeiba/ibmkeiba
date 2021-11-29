@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="ja">
-
 <!-- Header -->
 <head>
     <meta charset="UTF-8">
@@ -15,12 +12,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <!-- https://getbootstrap.com/ -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/styles/css/templatemo-style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.0/main.css">
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.js'></script>
+    <!-- https://fullcalendar.io/ -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- ajax -->
+
+    <script src="main.js"></script>
     
     <!--
 	Product Admin CSS Template
 	https://templatemo.com/tm-524-product-admin
 	-->
 </head>
-
-<body id="reportsPage">
-    <div class="" id="home">

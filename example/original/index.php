@@ -1,3 +1,4 @@
+<!-- Header -->
 <?php require './div_header.php' ?>
 
 <!-- Navigation bar -->
@@ -48,4 +49,6 @@
     </div>
 </div>
 
+<!-- Footer -->
 <?php require './div_footer.php' ?>
+

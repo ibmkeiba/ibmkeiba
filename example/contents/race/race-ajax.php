@@ -5,17 +5,21 @@
 
 <!-- GET送信の値を格納 -->
 <?php
-if ( isset($_GET['ymd']) ){
+if (isset($_GET['ymd'])) {
     $ymd = $_GET['ymd'];
-    echo "ymd= $ymd がGET送信されました";
-}
-else{
+} else {
     $ymd = 20211002;
-    echo "ymdがGET送信されていません";
 }
 ?>
 
 <?php $date = $pdo->query("select date from info WHERE ymd = $ymd GROUP BY date")->fetchColumn() ?>
+<?php if ($date == false) : ?>
+    <div class="alert alert-danger" role="alert">
+        <strong>Oops!</strong> この日はレースがありません. 他の日付を選択してください.
+    </div>
+    <?php return ?>
+<?php endif ?>
+
 
 <!-- menu(開催状況) 毎の表示変更 -->
 <?php
@@ -53,11 +57,11 @@ function menujudge($menu)
             <tbody>
 
                 <?php foreach ($pdo->query("select $select from info WHERE ymd = $ymd") as $row) : ?>
-                    <tr>
+                    <tr class="my-tr-race">
                         <td class="text-center">
                             <?php list($status, $menudisp) =  menujudge($row['menu']) ?>
                             <div class="tm-status-circle <?php echo $status ?>">
-                            </div><?php echo $menudisp ?>
+                            </div><b><?php echo $menudisp ?></b>
                         </td>
                         <?php foreach (array_slice($row, 1) as $col) : ?>
                             <td class="text-center"><b><?php echo $col ?></b></td>
@@ -69,3 +73,20 @@ function menujudge($menu)
         </table>
     </div>
 </div>
+
+<script>
+    var $my_tr_race = $('.my-tr-race')
+
+    $(function() {
+
+        $my_tr_race.click(function() {
+
+            $my_tr_race.each(function() {
+                $my_tr_race.css('background-color', '')
+            });
+            $(this).css('background-color', 'orange');
+
+        });
+
+    });
+</script>
