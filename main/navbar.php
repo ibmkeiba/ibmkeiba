@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-xl">
     <div class="container h-100">
-        <a class="navbar-brand" href="/keiba/GitHub/ibmkeiba/example">
+        <a class="navbar-brand" href="/keiba/GitHub/ibmkeiba/main">
             <i class="fas fa-horse-head fa-2x" style="color:orange"></i>
             <h1 class="tm-site-title mb-0 ml-3">AIしか勝たん</h1>
         </a>
@@ -20,14 +20,14 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/keiba/GitHub/ibmkeiba/example/data">
+                    <a class="nav-link" href="/keiba/GitHub/ibmkeiba/main/data">
                         <i class="far fa-file-alt"></i>
                         Database
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/keiba/GitHub/ibmkeiba/example/template.php">
+                    <a class="nav-link" href="/keiba/GitHub/ibmkeiba/main/template.php">
                         <i class="fas fa-atlas"></i>
                         Links
                     </a>

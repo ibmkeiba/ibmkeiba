@@ -20,10 +20,11 @@ function ajax_date(info) {
             //取得したHTMLを指定したidのタグに反映
             $('#race-ajax').html(res);
 
-            //出馬表と馬券の提案結果と予算未入力の警告の表示を消す
+            //出馬表と馬券の提案結果と予算未入力の警告と提案結果の表示を消す
             $('#card-ajax').html('');
             $('#recommend-ajax').hide();
             $('#budget-warning').hide();
+            $('#result-ajax').hide();
 
         })
         /* 通信失敗時 */
@@ -73,6 +74,9 @@ function ajax_event(info) {
 
             // 予算未入力の警告の表示を消す
             $('#budget-warning').hide();
+
+            // 提案結果の表示を消す
+            $('#result-ajax').hide();
 
             // #recommend-btn のタグ 'ymd','race-id' の属性値を設定
             $('#recommend-btn').attr('ymd', $('#keiba-card').attr('ymd'));
@@ -131,6 +135,9 @@ function raceClick(race_id, race_title) {
             // 予算未入力の警告の表示を消す
             $('#budget-warning').hide();
 
+            // 提案結果の表示を消す
+            $('#result-ajax').hide();
+
             // #recommend-ajax を表示
             $('#recommend-ajax').show();
 
@@ -173,7 +180,7 @@ $(function () {
         var $risk = $("input[name='risk-btn']:checked").val();
         $('#target-rec').text('提案します, race_id:' + $race_id + ', budget:' + $budget + ', risk:' + $risk);
 
-        if(!$budget) {
+        if (!$budget) {
             $('#target-b').text('予算を入力してください');
             $('#budget-warning').show();
             return;
@@ -182,6 +189,49 @@ $(function () {
         // 予算未入力の警告の表示を消す
         $('#budget-warning').hide();
         $('#target-b').text('リセット');
+
+        // 提案結果の表示を消す
+        $('#result-ajax').show();
+
+        // ajax date start
+        $.ajax({
+            url: './contents/recommend/recommend-ajax.php',
+            type: 'GET',
+            dataType: 'html',
+            data: {
+                race_id: $race_id,
+                budget: $budget,
+                risk: $risk,
+            }
+
+        })
+            /* 通信成功時 */
+            .done(function (res) {
+
+                // 通信結果を表示
+                $('#result-txt').html(res);
+
+                $('#target-last').html(res);
+
+            })
+            /* 通信失敗時 */
+            .fail(function () {
+
+                // 通信結果を表示
+                $('#target-last').text('馬券提案シミュレーションによる通信が失敗');
+
+            })
+            /* 必ず実行 */
+            .always(function () {
+
+                // CSSを変更
+                $('#target-last').css('color', 'red');
+
+            });
+
+        // ajax date end
+
+
     });
 
     // サンプル
