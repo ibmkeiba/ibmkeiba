@@ -178,6 +178,9 @@ $(function () {
             $('#budget-warning').show();
             return;
         }
+
+        // 予算未入力の警告の表示を消す
+        $('#budget-warning').hide();
         $('#target-b').text('リセット');
     });
 
