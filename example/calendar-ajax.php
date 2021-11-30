@@ -1,4 +1,3 @@
-
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
@@ -52,7 +51,6 @@
 
             },
 
-
         });
 
         calendar.render();
@@ -103,13 +101,13 @@
     }
 </style>
 
-<!-- Block #2 -->
+<!-- Block #Calendar -->
 <div class="col-12 tm-block-col">
-    <div class="tm-bg-primary-dark tm-block tm-block-avatar tm-block-scroll">
-        <h2 class="tm-block-title">Calendar</h2>
+    <div class="tm-bg-primary-dark tm-block tm-block-avatar">
+        <h2 class="tm-block-title">競馬カレンダー</h2>
 
         <!-- FullCalendar HTML -->
-        <div id="my-full-calendar">
+        <div id="my-full-calendar" class="w-75 mx-auto">
             <div id='script-warning'>
                 <code>php/get-events.php</code> must be running.
             </div>

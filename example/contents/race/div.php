@@ -5,10 +5,9 @@
 
 <!-- GET送信の値を格納 -->
 <?php
-if ( isset($_GET['ymd']) ){
+if (isset($_GET['ymd'])) {
     $ymd = $_GET['ymd'];
-}
-else{
+} else {
     $ymd = '20211002';
 }
 ?>

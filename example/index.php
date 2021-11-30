@@ -23,8 +23,53 @@
 
                 <!-- Require a php file for check in this area -->
 
-                <!-- Top : calendar -->
+                <!-- Block #calendar -->
                 <?php require './calendar-ajax.php' ?>
+
+                <!-- Block #race -->
+                <div id="race-ajax" class="w-100"></div>
+
+                <!-- Block #card -->
+                <div id="card-ajax"></div>
+
+                <!-- Block #recommend -->
+                <div class="col-12 tm-block-col" id="recommend-ajax" style="display: none">
+                    <div class="tm-bg-primary-dark tm-block">
+                        <h2 class="tm-block-title">予算とリスク</h2>
+
+                        <div class="d-flex text-white">
+                            <div class="p-5 flex-fill">
+                                <input class="form-control bg-white text-dark" type="text" placeholder="予算 ¥" id="budget" value="">
+                            </div>
+                            <div class="p-5 flex-fill">
+
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-info active">
+                                        <input type="radio" name="risk-btn" id="option1" value="1" autocomplete="off" checked> ローリスクローリターン
+                                    </label>
+                                    <label class="btn btn-info">
+                                        <input type="radio" name="risk-btn" id="option2" value="2" autocomplete="off"> ハイリスクハイリターン
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+
+                        <button type="button" class="btn btn-warning w-100" id="recommend-btn">AIから馬券の提案をもらう</button>
+
+                        <div class="pt-4" id="budget-warning" style="display: none">
+                            <div class="alert alert-danger w-100 text-center" role="alert">
+                                <strong>Oops!</strong> 予算を入力してください.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
 
                 <!-- Target Block -->
                 <div class="col-12 tm-block-col">
@@ -39,6 +84,10 @@
                         <h1 id="target-e1">Event AJAX通信結果：</h1>
                         <div id="target-e2"></div>
                         <h3 id="target-e3">Event 送信data：</h3>
+                        <h3 id="target-r1">レース選択結果：</h3>
+                        <h3 id="target-d">レース出馬表の表示状態：</h3>
+                        <h3 id="target-rec">馬券の提案の実行状態：</h3>
+                        <h3 id="target-b">予算未入力で提案した場合：</h3>
 
                     </div>
                 </div>
@@ -55,7 +104,6 @@
             </div>
         </div>
 
-
         <!-- Fotter -->
         <?php require './footer.php' ?>
 
@@ -63,7 +111,7 @@
 
     <!-- Script -->
     <?php require './script.php' ?>
-    
+
 </body>
 
 </html>

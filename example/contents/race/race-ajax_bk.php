@@ -18,8 +18,8 @@ if (isset($_GET['ymd'])) {
     <div class="col-12 tm-block-col">
 
             <!-- <h2 class="tm-block-title">レース一覧<span class="float-right"><?php echo $ymd ?></span></h2> -->
-            <div class="alert alert-danger w-100 text-center" role="alert">
-                <strong>Oops!</strong> この日はレースがありません. 他の日付を選択してください.（<?php echo $ymd ?>）
+            <div class="alert alert-danger w-100" role="alert">
+                <strong>Oops!</strong> この日はレースがありません. 他の日付を選択してください.<strong>（<?php echo $ymd ?>）</strong>
             </div>
 
     </div>
@@ -45,11 +45,11 @@ function menujudge($menu)
 }
 ?>
 
-<?php $select = 'menu, race_id, place, start_time, r, title, number' ?>
-<?php $select_ja = array('開催状況', '場所', '出走時刻', 'レース番号', 'レースタイトル', '出馬数') ?>
+<?php $select = 'menu, date, start_time, place, r, title, number' ?>
+<?php $select_ja = array('開催状況', '開催日', '出走時刻', '場所', 'レース番号', 'レースタイトル', '出馬数') ?>
 
 <div class="col-12 tm-block-col">
-    <div class="tm-bg-primary-dark tm-block tm-block-scroll">
+    <div class="tm-bg-primary-dark tm-block tm-block-product-categories tm-block-scroll">
         <h2 class="tm-block-title" id="keiba-race" ymd="<?php echo $ymd ?>">レース一覧<span class="float-right"><?php echo $date ?></span></h2>
         <table class="table table-hover">
             <thead>
@@ -63,13 +63,13 @@ function menujudge($menu)
             <tbody>
 
                 <?php foreach ($pdo->query("select $select from info WHERE ymd = $ymd") as $row) : ?>
-                    <tr class="my-tr-race" race-id="<?php echo $row['race_id'] ?>" race-title="<?php echo $row['title'] ?>">
+                    <tr class="my-tr-race" race-id="">
                         <td class="text-center">
                             <?php list($status, $menudisp) =  menujudge($row['menu']) ?>
                             <div class="tm-status-circle <?php echo $status ?>">
                             </div><b><?php echo $menudisp ?></b>
                         </td>
-                        <?php foreach (array_slice($row, 2) as $col) : ?>
+                        <?php foreach (array_slice($row, 1) as $col) : ?>
                             <td class="text-center"><b><?php echo $col ?></b></td>
                         <?php endforeach ?>
                     </tr>
@@ -91,11 +91,6 @@ function menujudge($menu)
                 $my_tr_race.css('background-color', '')
             });
             $(this).css('background-color', 'orange');
-
-            // $('#target-r1').text('OK');
-
-            // レースIDを引数としてmain.jsのraceClick関数を実行
-            raceClick($(this).attr('race-id'), $(this).attr('race-title'));
 
         });
 
