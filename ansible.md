@@ -7,13 +7,13 @@
 |　> |　fuga　|　piyo　|
 
 
-|  Type  |  Name  |  URL  |
-| ---- | :----: | ---- |
-|  CSS  |  fontawesome.min.css  |  https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/style/css/fontawesome.min.css  |
-|  CSS  |  templatemo-style.css  |  https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/style/css/templatemo-style.css  |
-|  JS  |  Chart.min.js  |  https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/style/js/Chart.min.js  |
-|  JS  |  moment.min.js  |  https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/style/js/moment.min.js  |
-| tooplate-scripts.js  ¦|  https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/style/js/tooplate-scripts.js  |
+|  ワーキングディレクトリ  |  ステージングエリア  |  ローカルリポジトリ  |
+| :----: | :----: | :----: |
+|  CSS  |  fontawesome.min.css  |  ▶︎◀︎  |
+|  CSS  |  templatemo-style.css  |  ▶︎◀︎  |
+|  JS  |  Chart.min.js  |  ▶︎◀︎  |
+|  JS  |  moment.min.js  |  ▶︎◀︎  |
+| tooplate-scripts.js  ¦|  ▶︎◀︎  |
 
 # 
 
@@ -22,3 +22,8 @@
 |-------- | --------
 |\2. Cell 1 |
 | Cell 2| Cell 3
+
+
+![Gitの基本フロー](/uploads/67c185960d2bdb87ae768077ef27a640/Gitの基本フロー.png)
+
+* **リスト**
