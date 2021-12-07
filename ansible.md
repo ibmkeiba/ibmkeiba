@@ -1,29 +1,22 @@
-# test
+# 【Day2 課題3 モジュール調査】 fail
 
-|　ワーキングディレクトリ　|　ステージングエリア　|　ローカルリポジトリ　|
-|　----　|　:----:　|　----　|
-|　hoge　|fuga   |　piyo　|
-|hoge　|       |　piyo　|
-|　> |　fuga　|　piyo　|
+## failモジュール
+whenの条件に合致した場合に、メッセージを出力する
 
+## 使用例
 
-|  ワーキングディレクトリ  |  ステージングエリア  |  ローカルリポジトリ  |
-| :----: | :----: | :----: |
-|  CSS  |  fontawesome.min.css  |  ▶︎◀︎  |
-|  CSS  |  templatemo-style.css  |  ▶︎◀︎  |
-|  JS  |  Chart.min.js  |  ▶︎◀︎  |
-|  JS  |  moment.min.js  |  ▶︎◀︎  |
-| tooplate-scripts.js  ¦|  ▶︎◀︎  |
+* CentOS 7以外は全てfailさせ実行を終了させる
 
-# 
+```
+- name: OS check
+  fail: msg="not supported."
+  when:
+    - ansible_distribution == "CentOS"
+    - ansible_distribution_major_version|int < 7
+```
 
-|\2. Header 1 | 
-| Header 2 | Header 3
-|-------- | --------
-|\2. Cell 1 |
-| Cell 2| Cell 3
+## 参考サイト
 
-
-![Gitの基本フロー](/uploads/67c185960d2bdb87ae768077ef27a640/Gitの基本フロー.png)
-
-* **リスト**
+* [ansible.builtin.fail – Fail with custom message](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/fail_module.html)  
+* [technote: Ansibleのfailモジュール](https://tech.withsin.net/2015/10/05/ansible-fail-module/)  
+* [goodbyegangsterのブログ](https://goodbyegangster.hatenablog.com/entry/2019/05/18/112921)  
