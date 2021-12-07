@@ -8,7 +8,7 @@
 
 
 |  Type  |  Name  |  URL  |
-| ---- | ---- | ---- |
+| ---- | :----: | ---- |
 |  CSS  |  fontawesome.min.css  |  https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/style/css/fontawesome.min.css  |
 |  CSS  |  templatemo-style.css  |  https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/style/css/templatemo-style.css  |
 |  JS  |  Chart.min.js  |  https://cdn.jsdelivr.net/gh/ibmkeiba/ibmkeiba@main/style/js/Chart.min.js  |
